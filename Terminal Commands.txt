@@ -1,0 +1,7 @@
+cd desktop
+cd 'IST 411'
+cd 'Express.js Classwork'
+nodemon express1.js
+
+curl -X GET http://127.0.0.1:3000/........
+curl -X POST htpp://127.0.0.1:3000/........

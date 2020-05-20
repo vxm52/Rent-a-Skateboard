@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rent-a-Skateboard</title>
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css" type="text/css" />
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h1>Rent-a-Skateboard</h1>
+                <br>
+
+            <div class="center">
+                <div id="page1">
+                    <button id="openPage2Button" onclick="displayPage2();">Add Username</button><br><br>
+                    <button id="openPage3Button" onclick="displayPage3();">Retrieve Reservation Info</button><br><br>
+                    <button id="openPage4Button" onclick="displayPage4();">Get All Reservations</button><br><br>
+                    <button id="openPage5Button" onclick="displayPage5();">Create Reservation</button><br><br>
+                    <button id="openPage6Button" onclick="displayPage6();">Update Reservation</button><br><br>
+                    <button id="openPage7Button" onclick="displayPage7();">Delete Reservation</button><br><br>
+                </div>
+
+
+                <div id="page2" style="display: none;">
+                    <label>New User: </label>
+                    <input id="addUsernameField"/>
+                    <br>
+                    <button id="addUsername" onclick="addUsername();">Add Username</button> <!--1a-->
+                    <br><br><br><br>
+                    <button id="returnToMainMenu" onclick="displayPage1a();">Main Menu</button><br>
+                </div>
+                
+                <div id="page3" style="display: none;">
+                    <label>Info for user: </label>
+                    <input id="retrieveUserField"/>
+                    <br>
+                    <button id="retrieveUserInfo" onclick="retrieveUserInfo();">Retrieve Reservation Info</button> <!--1b-->
+                    <br><br><br><br>  
+                    <button id="returnToMainMenu2" onclick="displayPage1b();">Main Menu</button><br>
+                </div>
+                
+                <div id="page4" style="display: none;">
+                    <button id="getAllReservations" onclick="getAllReservations();">View All Reservations</button> <!--1c-->
+                    <br>
+                    <p id="allReservationField">Show Reservation Info Here</p>
+                    <!-- <table width="90%" style="border:solid;background-color:lime;">
+                    <tr style="background-color: white"></tr>
+                    </table> -->
+                    <br><br><br><br>
+                    <button id="returnToMainMenu3" onclick="displayPage1c();">Main Menu</button><br>
+                </div>
+
+                <div id="page5" style="display: none;">
+                    <label>Username: </label>
+                    <input id="createUsernameInput"/>
+                    <br>
+                    <label>Reservation Name: </label>
+                    <input id="createReservationInput"/>
+                    <br>
+                    <label>Start Date: </label>
+                    <input id="createStartDateInput"/>
+                    <br>
+                    <label>Start Time: </label>
+                    <input id="createStartTimeInput"/>
+                    <br>
+                    <label>No. of Hours: </label>
+                    <input id="createNumOfHoursInput"/>
+                    <br>
+                    <button id="createReservationInput" onclick="createReservation();">Create Reservation</button> <!--1d-->
+                    <br><br><br><br>
+                    <button id="returnToMainMenu4" onclick="displayPage1d();">Main Menu</button><br>
+                </div>
+                
+                <div id="page6" style="display: none;">
+                    <label>Username: </label>
+                    <input id="updateUsernameInput">
+                    <br>
+                    <label>Reservation Name: </label>
+                    <input id="updateReservationInput">
+                    <br>
+                    <label>Start Date: </label>
+                    <input id="updateStartDateInput">
+                    <br>
+                    <label>Start Time: </label>
+                    <input id="updateStartTimeInput">
+                    <br>
+                    <label>No. of Hours: </label>
+                    <input id="updateNumOfHoursInput">
+                    <br>
+                    <button id="updateReservation" onclick="updateReservation();">Update Reservation</button> <!--1e-->
+                    <br><br><br><br>
+                    <button id="returnToMainMenu5" onclick="displayPage1e();">Main Menu</button><br>
+                </div>
+
+                <div id="page7" style="display: none;">
+                    <label>Username: </label>
+                    <input id="deleteUsernameInput">
+                    <br>
+                    <button id="deleteReservation" onclick="deleteReservation();">Delete Reservation</button> <!--1f-->
+                    <br><br><br><br>
+                    <button id="returnToMainMenu6" onclick="displayPage1f();">Main Menu</button><br>
+                </div>
+                
+            </div>
+        </div>
+
+        <script src="client.js" defer></script>
+    </body>
+</html>

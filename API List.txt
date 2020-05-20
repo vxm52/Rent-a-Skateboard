@@ -1,0 +1,23 @@
+1a. Add a username to the system
+curl -X POST http://127.0.0.1:3000/addUsername/:userName
+**This is from line 109 in express1.js -> (app.post('/addUsername/:userName', (req, res) => {))
+
+1b. Retrieve the reservation info (if they have one) for a given user
+curl -X GET http://127.0.0.1:3000/getBoard/:boardName/owner/:ownerName
+**This is from line 21 in express1.js -> (app.get('/getBoard/:boardName/owner/:ownerName', (req, res) => {))
+
+1c. Get a list of reservations for all users
+curl -X GET http://127.0.0.1:3000/getReservationList
+**This is from line 135 in express1.js (app.get('/getReservationList', (req, res) => {))
+
+1d. Create a reservation for a given user (Specify username, start date, start time, and number of hours):
+curl -X POST http://127.0.0.1:3000/addReservation/:userName/reservation/:reservationName/startDate/:startDate/startTime/:startTime/numOfHours/:numOfHours
+**This is from line 173 in express1.js (app.post('/addReservation/:userName/reservation/:reservationName/startDate/:startDate/startTime/:startTime/numOfHours/:numOfHours', (req, res) => {))
+
+1e. Update a reservation for a given user
+curl -X POST http://127.0.0.1:3000/updateReservation/:userName/reservation/:reservationName/startDate/startTime/:startTime/numOfHours/:numOfHours
+**This is from line 220 in express1.js (app.post('/updateReservation/:userName/reservation/:reservationName/startDate/:startDate/startTime/:startTime/numOfHours/:numOfHours', (req, res) => {))
+
+1f. Delete a reservation for a given user
+curl -X DELETE http://127.0.0.1:3000/deleteReservation/:userName
+**This if from line 267 in express1.js
